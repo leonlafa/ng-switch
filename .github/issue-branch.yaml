@@ -1,0 +1,6 @@
+
+branches:
+  - label: feature
+    prefix: feature/
+  - label: bug
+    prefix: bugfix/
