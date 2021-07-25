@@ -1,0 +1,76 @@
+@use 'src/styles' as *;
+
+.ng-switch-screen {
+  height: $height-screen;
+  width: $width-screen;
+  background: $color-screen-background;
+  border: $br1 solid $color-black;
+  position: relative;
+  box-shadow: inset 0px -20px 0px rgba($color-black, 0.5),
+    inset 0px 16px 0px rgba($color-white, 0.25);
+
+  &__notch {
+    &:first-of-type {
+      float: left;
+      margin-left: -8px;
+    }
+
+    &:last-of-type {
+      float: right;
+      margin-right: -8px;
+    }
+  }
+
+  &__reflections {
+    height: $height-screen-inner;
+    width: 110px;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translateY(-50%) skew(-25deg);
+    background: rgba($color-white, 0.025);
+    z-index: 2;
+
+    &::after {
+      content: "";
+      height: inherit;
+      width: 30px;
+      position: absolute;
+      left: 120%;
+      top: 50%;
+      margin-right: 40px;
+      transform: translateY(-50%);
+      background: inherit;
+    }
+  }
+
+  &--inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translate(50%, 50%);
+    bottom: 50%;
+    right: 50%;
+    border-radius: $br1;
+    width: $width-screen-inner;
+    height: $height-screen-inner;
+    background: $color-screen-inner-background;
+    border-top: 32px solid $color-black;
+    border-bottom: 32px solid $color-black;
+    border-right: 40px solid $color-black;
+    border-left: 40px solid $color-black;
+    box-shadow: none;
+  }
+}
+
+i {
+  height: 18px;
+  width: 12px;
+  border: $br1 solid $color-black;
+  border-top: none;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  margin-top: -8px;
+  background: $color-app-background;
+}

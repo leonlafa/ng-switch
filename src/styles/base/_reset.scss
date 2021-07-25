@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: $color-app-background;
+}

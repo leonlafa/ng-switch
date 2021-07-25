@@ -26,6 +26,9 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "styles": [
+              "src/styles/index.scss"
+            ],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
