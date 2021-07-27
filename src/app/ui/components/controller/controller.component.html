@@ -1,8 +1,9 @@
 <section>
+  <!-- Controller Trigger -->
   <div
     class="ng-switch-controller-trigger"
     [ngClass]="
-      orientation === ControllerOrientation.left
+      type === ControllerType.left
         ? 'ng-switch-controller-trigger--left'
         : 'ng-switch-controller-trigger--right'
     "
@@ -11,12 +12,40 @@
   <div
     class="ng-switch-controller"
     [ngClass]="
-      orientation === ControllerOrientation.left
+      type === ControllerType.left
         ? 'ng-switch-controller--left'
         : 'ng-switch-controller--right'
     "
   >
-    <app-joystick></app-joystick>
-    <app-button></app-button>
+    <!-- Controller Top -->
+    <div class="ng-switch-controller__top"></div>
+    
+    <!-- Controller Center -->
+    <div
+      class="ng-switch-controller__center"
+      [ngClass]="
+        type === ControllerType.left
+          ? 'ng-switch-controller__center--left'
+          : 'ng-switch-controller__center--right'
+      "
+    >
+      <app-joystick></app-joystick>
+      <app-button></app-button>
+      <app-button></app-button>
+      <app-button></app-button>
+      <app-button></app-button>
+    </div>
+
+    <!-- Controller Bottom -->
+    <div
+      class="ng-switch-controller__bottom"
+      [ngClass]="
+        type === ControllerType.left
+          ? 'ng-switch-controller__bottom--left'
+          : 'ng-switch-controller__bottom--right'
+      "
+    >
+      <app-button></app-button>
+    </div>
   </div>
 </section>

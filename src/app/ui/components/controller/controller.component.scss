@@ -7,6 +7,85 @@
   height: 504px;
   width: 172px;
 
+  // Top of the controller
+
+  __top {
+  }
+
+  // Center of the controller
+
+  &__center {
+    display: grid;
+    place-items: center;
+
+    &--left {
+      grid-template-areas:
+        "joystick joystick"
+        "up up"
+        "left right"
+        "down down";
+
+      app-joystick {
+        margin-bottom: 32px;
+      }
+    }
+
+    &--right {
+      grid-template-areas:
+        "up up"
+        "left right"
+        "down down"
+        "joystick joystick";
+
+      app-joystick {
+        margin-top: 32px;
+      }
+    }
+
+    app-joystick {
+      grid-area: joystick;
+    }
+
+    app-button:nth-of-type(1) {
+      grid-area: up;
+    }
+
+    app-button:nth-of-type(2) {
+      grid-area: left;
+    }
+
+    app-button:nth-of-type(3) {
+      grid-area: right;
+    }
+
+    app-button:nth-of-type(4) {
+      grid-area: down;
+    }
+  }
+
+  // Bottom of the controller
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 48px;
+
+    &--left {
+      justify-content: flex-end;
+      padding-right: 24px;
+
+      &::ng-deep {
+        button {
+          border-radius: 4px;
+        }
+      }
+    }
+
+    &--right {
+      justify-content: flex-start;
+      padding-left: 24px;
+    }
+  }
+
   &--left {
     border-top-left-radius: 120px;
     border-bottom-left-radius: 120px;
@@ -32,6 +111,7 @@
       border-bottom-right-radius: $br1;
     }
   }
+  
   &--right {
     border-top-right-radius: 120px;
     border-bottom-right-radius: 120px;
