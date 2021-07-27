@@ -25,9 +25,8 @@
       width: 12px;
       height: 400px;
       background: #2e3235;
-      right: -28px;
+      right: -30px;
       position: absolute;
-      z-index: -120;
       box-shadow: inset -4px 0px 0px rgba($color-white, 0.25);
       border-top-right-radius: $br1;
       border-bottom-right-radius: $br1;
@@ -47,7 +46,7 @@
       content: "";
       background: rgba($color-black, 0.75);
       top: 50%;
-      left: -28px;
+      left: -30px;
       transform: translateY(-50%);
       width: 12px;
       height: 400px;
