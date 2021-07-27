@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScreenComponent } from './ui/components';
 import { ControllerComponent } from './ui/components/controller/controller.component';
+import { JoystickComponent } from './ui/components/joystick/joystick.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScreenComponent,
-    ControllerComponent
+    ControllerComponent,
+    JoystickComponent
   ],
   imports: [
     BrowserModule,
