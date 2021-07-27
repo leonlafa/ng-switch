@@ -62,25 +62,25 @@
 
 .ng-switch-controller-trigger {
   position: absolute;
-  top: -12px;
+  top: -14px;
   width: 140px;
   height: 120px;
   border: 8px solid $color-black;
+  background: $color-grey;
+  box-shadow: inset -100px 40px 0px rgba($color-black, 0.25);
   z-index: -1;
 
   &--left {
-    left: -12px;
+    left: -14px;
     border-radius: 1200px 60px;
-    background: rgba($color-black, 0.4);
-    box-shadow: inset -100px 40px 0px rgba($color-white, 0.5);
-    transform: translateX(4px);
+    box-shadow: inset -100px 40px 0px rgba($color-white, 0.3);
+    transform: translateX(6px);
   }
 
   &--right {
     border-radius: 60px 1200px;
-    right: -12px;
-    background: rgba($color-black, 0.4);
-    box-shadow: inset 100px 40px 0px rgba($color-white, 0.5);
-    transform: translateX(-6px);
+    right: -14px;
+    box-shadow: inset 100px 40px 0px rgba($color-white, 0.3);
+    transform: translateX(-8px);
   }
 }
