@@ -1,0 +1,18 @@
+<section>
+  <div
+    class="ng-switch-controller-trigger"
+    [ngClass]="
+      orientation === ControllerOrientation.left
+        ? 'ng-switch-controller-trigger--left'
+        : 'ng-switch-controller-trigger--right'
+    "
+  ></div>
+  <div
+    class="ng-switch-controller"
+    [ngClass]="
+      orientation === ControllerOrientation.left
+        ? 'ng-switch-controller--left'
+        : 'ng-switch-controller--right'
+    "
+  ></div>
+</section>

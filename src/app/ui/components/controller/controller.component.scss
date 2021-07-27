@@ -1,0 +1,87 @@
+@use 'src/styles' as  *;
+
+.ng-switch-controller {
+  display: grid;
+  grid-template-rows: auto 1fr 1fr;
+  grid-gap: 44px;
+  height: 504px;
+  width: 172px;
+
+  &--left {
+    border-top-left-radius: 120px;
+    border-bottom-left-radius: 120px;
+    background: $color-blue;
+    transform: translateX(6px);
+    border: 8px solid $color-black;
+    box-shadow: inset 40px -40px 0px rgba($color-white, 0.09),
+      inset 12px 16px 0px rgba($color-white, 0.4),
+      inset 0px -20px 0px rgba($color-black, 0.25);
+
+    &::after {
+      border: 8px solid $color-black;
+      content: "";
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 400px;
+      background: #2e3235;
+      right: -28px;
+      position: absolute;
+      z-index: -120;
+      box-shadow: inset -4px 0px 0px rgba($color-white, 0.25);
+      border-top-right-radius: $br1;
+      border-bottom-right-radius: $br1;
+    }
+  }
+  &--right {
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+    border: 8px solid $color-black;
+    box-shadow: inset -40px -32px 0px rgba($color-black, 0.05),
+      inset 0px 16px 0px rgba($color-white, 0.2),
+      inset -12px -20px 0px rgba($color-black, 0.25);
+    background: $color-red;
+    transform: translateX(-8px);
+
+    &::after {
+      content: "";
+      background: rgba($color-black, 0.75);
+      top: 50%;
+      left: -28px;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 400px;
+      border: $br1 solid $color-black;
+      position: absolute;
+      box-shadow: inset -4px 0px 0px rgba($color-white, 0.25);
+      border-top-left-radius: $br1;
+      border-bottom-left-radius: $br1;
+      z-index: 1;
+    }
+  }
+}
+
+.ng-switch-controller-trigger {
+  position: absolute;
+  top: -12px;
+  width: 140px;
+  height: 120px;
+  border: 8px solid $color-black;
+  z-index: -1;
+
+  &--left {
+    left: -12px;
+    border-radius: 1200px 60px;
+    background: rgba($color-black, 0.4);
+    box-shadow: inset -100px 40px 0px rgba($color-white, 0.5);
+    transform: translateX(4px);
+  }
+
+  &--right {
+    border-radius: 60px 1200px;
+    right: -12px;
+    background: rgba($color-black, 0.4);
+    box-shadow: inset 100px 40px 0px rgba($color-white, 0.5);
+    transform: translateX(-6px);
+  }
+}
