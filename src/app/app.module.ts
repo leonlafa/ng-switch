@@ -3,21 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScreenComponent } from './ui/components';
-import { ControllerComponent } from './ui/components/controller/controller.component';
-import { JoystickComponent } from './ui/components/joystick/joystick.component';
+import {
+  ScreenComponent,
+  ControllerComponent,
+  JoystickComponent,
+  ButtonComponent,
+} from './ui/components';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScreenComponent,
     ControllerComponent,
-    JoystickComponent
+    JoystickComponent,
+    ButtonComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

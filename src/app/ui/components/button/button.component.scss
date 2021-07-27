@@ -1,0 +1,16 @@
+@use 'src/styles' as *;
+
+.ng-switch-button {
+  height: 44px;
+  width: 44px;
+  border-radius: 100%;
+  border: 8px solid $color-black;
+  background: $color-grey;
+  border: 8px solid $color-black;
+  box-shadow: 0px 6px 0px rgba($color-black, 0.25),
+    inset 0px 6px 0px rgba($color-white, 0.25);
+
+  &--square {
+    border-radius: 4px;
+  }
+}
