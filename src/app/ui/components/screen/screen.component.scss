@@ -28,9 +28,9 @@
     position: absolute;
     left: 25%;
     top: 50%;
-    transform: translateY(-50%) skew(-25deg);
-    background: rgba($color-white, 0.025);
-    z-index: 2;
+    transform: translateY(-50%) skew(33deg);
+    background: rgba($color-white, 0.015);
+    z-index: 3;
 
     &::after {
       content: "";
