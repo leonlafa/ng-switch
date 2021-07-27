@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ControllerOrientation } from './ui/components';
+import { ControllerType } from './ui/components';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,5 @@ import { ControllerOrientation } from './ui/components';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  ControllerOrientation = ControllerOrientation;
+  ControllerType = ControllerType;
 }

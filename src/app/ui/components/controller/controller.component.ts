@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-export enum ControllerOrientation {
+export enum ControllerType {
   left = 'left',
   right = 'right',
 }
@@ -11,6 +11,6 @@ export enum ControllerOrientation {
   styleUrls: ['./controller.component.scss'],
 })
 export class ControllerComponent {
-  ControllerOrientation = ControllerOrientation;
-  @Input() orientation: ControllerOrientation = ControllerOrientation.left;
+  ControllerType = ControllerType;
+  @Input() type: ControllerType = ControllerType.left;
 }
