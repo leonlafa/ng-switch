@@ -9,12 +9,59 @@
 
   // Top of the controller
 
-  __top {
+  &__top {
+    display: grid;
   }
 
-  // Center of the controller
+  &__top-button {
+    background: $color-black;
 
-  &__center {
+    &--left {
+      justify-self: flex-end;
+      width: 10px;
+      height: 3px;
+      transform: scale(4);
+      margin: 36px 32px 0 32px;
+      box-shadow: 0px 1px 0px rgba($color-black, 0.25);
+    }
+
+    &--right {
+      // TODO: Refactor one day :)
+      position: relative;
+      width: 44px;
+      height: 44px;
+      background: $color-red;
+      margin: 20px 32px 0 12px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background: $color-black;
+        left: 50%;
+        top: 4px;
+        bottom: 4px;
+        transform: translateX(-50%);
+        width: 12px;
+        box-shadow: 0px 4px 0px rgba($color-black, 0.25);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background: $color-black;
+        top: 50%;
+        left: 4px;
+        right: 4px;
+        height: 12px;
+        transform: translateY(-50%);
+        box-shadow: 0px 4px 0px rgba($color-black, 0.25);
+      }
+    }
+  }
+
+  // Middle of the controller
+
+  &__middle {
     display: grid;
     place-items: center;
 
@@ -27,6 +74,7 @@
 
       app-joystick {
         margin-bottom: 32px;
+        margin-top:8px;
       }
     }
 
@@ -64,6 +112,7 @@
   }
 
   // Bottom of the controller
+  
   &__bottom {
     display: flex;
     align-items: flex-end;
@@ -111,7 +160,7 @@
       border-bottom-right-radius: $br1;
     }
   }
-  
+
   &--right {
     border-top-right-radius: 120px;
     border-bottom-right-radius: 120px;

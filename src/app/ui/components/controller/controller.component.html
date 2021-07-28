@@ -18,15 +18,24 @@
     "
   >
     <!-- Controller Top -->
-    <div class="ng-switch-controller__top"></div>
-    
-    <!-- Controller Center -->
+    <div class="ng-switch-controller__top">
+      <div
+        class="ng-switch-controller__top-button"
+        [ngClass]="
+          type === ControllerType.left
+            ? 'ng-switch-controller__top-button--left'
+            : 'ng-switch-controller__top-button--right'
+        "
+      ></div>
+    </div>
+
+    <!-- Controller Middle -->
     <div
-      class="ng-switch-controller__center"
+      class="ng-switch-controller__middle"
       [ngClass]="
         type === ControllerType.left
-          ? 'ng-switch-controller__center--left'
-          : 'ng-switch-controller__center--right'
+          ? 'ng-switch-controller__middle--left'
+          : 'ng-switch-controller__middle--right'
       "
     >
       <app-joystick></app-joystick>
